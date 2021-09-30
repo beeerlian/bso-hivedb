@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
-import 'package:hivedb/pages/home.dart';
+import 'package:flutter_hivedb/pages/home.dart';
 import 'package:path_provider/path_provider.dart' as path;
+import 'package:hive/hive.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  var documentDirectory = await path.getApplicationDocumentsDirectory();
-  Hive.init(documentDirectory.path);
+  var docDirectory = await path.getApplicationDocumentsDirectory();
+  Hive.init(docDirectory.path);
   runApp(const MyApp());
 }
 
